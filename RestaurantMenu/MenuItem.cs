@@ -23,7 +23,7 @@ namespace RestaurantMenu
             this.Price = price;
             this.Description = description;
             this.Category = category;
-            this.TimeDate = DateTime.now;
+            this.TimeDate = DateTime.Now;
 
         }
         public MenuItem(string itemname, double price, string description, string category, string newOrNot)
@@ -41,9 +41,13 @@ namespace RestaurantMenu
         {
             Console.WriteLine();
             return $"___________________________________________\n{this.ItemName}: ${this.Price}\n{this.Category}\n{this.Description}\n{this.New}\nAdded on:{TimeDate}\n___________________________________________";
-  
-
         }
+
+        //public string ItemEntry()
+        //{
+        //    Console.WriteLine();
+        //    return $"___________________________________________\n{this.ItemName}: ${this.Price}\n{this.Category}\n{this.Description}\nAdded on:{TimeDate}\n___________________________________________";
+        //}
 
 
 

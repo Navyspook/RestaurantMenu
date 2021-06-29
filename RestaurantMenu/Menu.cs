@@ -12,7 +12,7 @@ namespace RestaurantMenu
         //displays prices and category 
         public List<string> MenuItems { get; set; }
 
-        public DateTime TimeDate { get; set; }
+        public static DateTime TimeDate { get; set; }
 
         public static MenuItem guacamole = new MenuItem("Chips and Guacamole", 10.00, "Homemade Guacamole with corn tortillas", "Appetizer", "New!");
         public static MenuItem breadsticks = new MenuItem("Bread Sticks", 3.00, "Bread sticks with butter and garlic.", "Appetizer");
@@ -36,12 +36,14 @@ namespace RestaurantMenu
             {fruit},
         };
 
-        public void PrintMenu()
+        public static void PrintMenu()
         {
             foreach (MenuItem food in items)
             {
-                this.TimeDate = DateTime.Now;
+                TimeDate = DateTime.Now;
+                //Console.WriteLine(food.ItemEntryNew());
                 Console.WriteLine(food.ItemEntry());
+
                 Console.WriteLine(TimeDate);
             }
                
